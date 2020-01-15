@@ -69,7 +69,8 @@ class PhotoUpload(Resource):
 
         name = data['name']
 
-        url = storage.child("{}.png".format(name)).get_url()
+        url = storage.child("{}.png".format(name)).get_url(None)
+        storage.child("{}.png".format(name)).download("{}.png".format(name))
    
 
 
