@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 import werkzeug, os
-import base64
 import pyrebase
 
 
@@ -92,7 +91,7 @@ class PhotoUpload(Resource):
 
 
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '/check')
 api.add_resource(PhotoUpload,'/upload')
 
 if __name__ == '__main__':
