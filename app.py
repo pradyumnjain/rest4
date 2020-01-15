@@ -72,9 +72,10 @@ class PhotoUpload(Resource):
 
 
         try:
-            storage.child("{}.png".format(name)).download("{}.png".format(name))
+            # storage.child("{}.png".format(name)).download("{}.png".format(name))
+            url = storage.child("{}.png".format(name)).get_url()
             return {
-                    'data':'',
+                    'data':url,
                     'message':'photo recieved',
                     'status':'success'
                     }
