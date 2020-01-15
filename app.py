@@ -68,6 +68,8 @@ class PhotoUpload(Resource):
         data = parser.parse_args()
 
         name = data['name']
+
+        url = storage.child("{}.png".format(name)).get_url()
    
 
 
