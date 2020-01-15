@@ -80,6 +80,7 @@ class PhotoUpload(Resource):
                     }
         except:
             return {
+                    'name':name,
                     'data':'',
                     'message':'Something whent wrong',
                     'status':'error'
